@@ -1,7 +1,4 @@
-"# Virtual-Traffic-Simulation" 
 
-# check the progress !
-https://starbutnopatrik.github.io/Virtual-Traffic-Simulation/
 
 ## TODO:
 
