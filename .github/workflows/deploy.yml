@@ -17,19 +17,18 @@ jobs:
         with:
           node-version: '14'  # specify the Node.js version if needed
 
-      - name: Build and Deploy
+      - name: Install dependencies
         run: |
-          # Install dependencies if you have any
-          # npm install
+          npm install
           
-          # Deploy to GitHub Pages
-          npx github-pages-deploy-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build the project
+        run: |
+          # Add your build commands here, if needed
+          # For example, if using Jekyll:
+          # bundle exec jekyll build
           
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Path to the directory with your HTML files
-
+          publish_dir: ./  # Adjust this to the correct directory for your build output
